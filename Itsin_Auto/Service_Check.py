@@ -86,8 +86,8 @@ class getstart():
                     print("Noop")
 
 
-        except Exception as e:
-            print("Except: " + str(e))
+        #except Exception as e:
+        #    print("Except: " + str(e))
 
         except:
             print("Unknown Exception")
