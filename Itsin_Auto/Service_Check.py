@@ -75,7 +75,7 @@ class getstart():
                     if result == -1:
                         print("IPS 안씀")
                         funused.write("Service :" + service + " Connect IP : " + lhost_ip)
-hist
+
                     elif result > 0:
                         print("IPS 사용중")
                         fused.write("Service :" + service + " Connect IP : " + lhost_ip)
