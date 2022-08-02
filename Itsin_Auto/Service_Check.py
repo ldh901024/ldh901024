@@ -24,12 +24,10 @@ class getstart():
             cli="config firewall policy"
             stdin, stdout, stderr = ssh_client.exec_command(cli)
 
-            #cli = "sh \| grep -f ips-sensor"
             cli = "sh \| grep ips-sensor"
             stdin, stdout, stderr = ssh_client.exec_command(cli)
             msg = self.outdata(stdout)
-            #typemsg=msg.split("set")
-            #print(msg)
+
             result=msg.find('set ips-sensor')
             if result == -1:
                 print("IPS 안씀")
