@@ -9,32 +9,78 @@ import time
 
 class getstart():
     def outdata(self, lines):
-        output=""
+        output = ""
         for line in lines.readlines():
-            output +=line
+            output += line
 
         return output
 
     def run_getstart(self, args):
+        # File Open
+        with open('/NAS/ll.csv', 'r') as csv_file:
+            csv_reader = csv.reader(csv_file)
+            array2d = list(csv_reader)
+
+        fused = open('/NAS/IPS_Usage.txt', 'w')
+        funused = open('/NAS/IPS_Unused.txt', 'w')
+
+        array = []
+        array.append([])
+        array.append([])
+
+        arraynum = 0
+
+        # Array 입력.
+        for line in array2d:
+            list_len = len(line)
+            num = 0
+            while True:
+                Tempstr = line[num]
+                for vStr in VendorCheck:
+                    if line[num] == vStr:
+                        array.append([])
+                        array[arraynum].append(line[num - 1])
+                        array[arraynum].append(line[num])
+                        array[arraynum].append(line[num + 1])
+                        array[arraynum].append(line[num + 2])
+                        array[arraynum].append(line[num + 3])
+                        array[arraynum].append(line[num + 4])
+                        arraynum = arraynum + 1
+                    else:
+                        continue
+
+                num = num + 1
+
+                if Tempstr is None:
+                    break
+
+                if num >= list_len:
+                    break
+
         try:
-            ssh_client = paramiko.SSHClient()
-            ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            ssh_client.connect("172.16.21.1", username="itsadmin", password="2022Dlcmdls!@", port="22", timeout=10)
+            for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
+                if service == "MSS":
+                    ssh_client = paramiko.SSHClient()
+                    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
 
-            cli="config firewall policy"
-            stdin, stdout, stderr = ssh_client.exec_command(cli)
+                    cli = "config firewall policy"
+                    stdin, stdout, stderr = ssh_client.exec_command(cli)
 
-            cli = "sh \| grep ips-sensor"
-            stdin, stdout, stderr = ssh_client.exec_command(cli)
-            msg = self.outdata(stdout)
+                    cli = "sh \| grep ips-sensor"
+                    stdin, stdout, stderr = ssh_client.exec_command(cli)
+                    msg = self.outdata(stdout)
 
-            result=msg.find('set ips-sensor')
-            if result == -1:
-                print("IPS 안씀")
-            elif result > 0:
-                print("IPS 사용중")
+                    result = msg.find('set ips-sensor')
+                    if result == -1:
+                        print("IPS 안씀")
+                        funused.write("Service :" + service + " Connect IP : " + lhost_ip)
 
-            ssh_client.close()
+                    elif result > 0:
+                        print("IPS 사용중")
+                        fused.write("Service :" + service + " Connect IP : " + lhost_ip)
+
+                    ssh_client.close()
 
 
         except Exception as e:
@@ -43,7 +89,7 @@ class getstart():
         except:
             print("Unknown Exception")
 
-        #f.close()
+        # f.close()
 
 
 if __name__ == "__main__":
