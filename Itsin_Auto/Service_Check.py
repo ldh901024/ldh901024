@@ -59,7 +59,7 @@ class getstart():
 
         try:
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
-                if service == "MSS":
+                if service == "MSS_FG":
                     ssh_client = paramiko.SSHClient()
                     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                     ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
