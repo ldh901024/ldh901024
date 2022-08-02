@@ -30,6 +30,8 @@ class getstart():
 
         arraynum = 0
 
+        VendorCheck = ["Backup_FG", "test"]
+
         # Array 입력.
         for line in array2d:
             list_len = len(line)
