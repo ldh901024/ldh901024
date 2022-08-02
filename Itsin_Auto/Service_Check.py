@@ -26,7 +26,6 @@ class getstart():
 
         array = []
         array.append([])
-        array.append([])
 
         arraynum = 0
 
