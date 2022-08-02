@@ -26,8 +26,7 @@ class getstart():
 
         array = []
         array.append([])
-
-        arraynum = 0
+        arraynum=0
 
         VendorCheck = ["Backup_FG", "test"]
 
@@ -60,7 +59,7 @@ class getstart():
 
         try:
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
-                if service == "MSS_FG":
+                if service == "MSS":
                     ssh_client = paramiko.SSHClient()
                     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                     ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
@@ -76,12 +75,15 @@ class getstart():
                     if result == -1:
                         print("IPS 안씀")
                         funused.write("Service :" + service + " Connect IP : " + lhost_ip)
-
+hist
                     elif result > 0:
                         print("IPS 사용중")
                         fused.write("Service :" + service + " Connect IP : " + lhost_ip)
 
                     ssh_client.close()
+
+                else:
+                    print("Noop")
 
 
         except Exception as e:
