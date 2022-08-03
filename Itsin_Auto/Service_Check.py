@@ -59,7 +59,7 @@ class getstart():
 
                 if num >= list_len:
                     break
-
+            """
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
                     try:
@@ -131,7 +131,7 @@ class getstart():
         except:
             print("Unknown Exception")
             pass
-        """
+
          #f.close()
 
 
