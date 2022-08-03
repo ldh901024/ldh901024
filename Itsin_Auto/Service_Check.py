@@ -90,8 +90,6 @@ class getstart():
 
                 else:
                     print("Noop")
-        except socket.timeout:
-            print("time out!!!!")
 
         except TimeOutException as e:
             print(e)
