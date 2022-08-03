@@ -5,7 +5,10 @@ import re
 import subprocess
 import paramiko
 import time
+import socket
 
+class TimeOutException(Exception):
+    pass
 
 class getstart():
     def outdata(self, lines):
@@ -87,7 +90,11 @@ class getstart():
 
                 else:
                     print("Noop")
+        except socket.timeout:
+            print("time out!!!!")
 
+        except TimeOutException as e:
+            print(e)
 
         except Exception as e:
             print("Except: " + str(e))
