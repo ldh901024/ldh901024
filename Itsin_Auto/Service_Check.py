@@ -93,7 +93,7 @@ class getstart():
                     ssh_client.close()
 
                 else:
-                    print("Noop")
+                    print("놉")
 
         except Exception as e:
             print("Except: " + str(e))
@@ -102,9 +102,6 @@ class getstart():
         except:
             print("Unknown Exception")
             pass
-
-         #f.close()
-
 
 if __name__ == "__main__":
     getssluser = getstart()
