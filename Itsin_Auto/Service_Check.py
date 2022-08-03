@@ -91,10 +91,12 @@ class getstart():
 
         except Exception as e:
             print("Except: " + str(e))
+            continue
 
 
         except:
             print("Unknown Exception")
+            continue
 
          #f.close()
 
