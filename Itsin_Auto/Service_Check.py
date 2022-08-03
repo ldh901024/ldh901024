@@ -58,6 +58,7 @@ class getstart():
                     break
 
         try:
+            raise NotImplementedError
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
                     ssh_client = paramiko.SSHClient()
@@ -74,11 +75,11 @@ class getstart():
                     result = msg.find('set ips-sensor')
                     if result == -1:
                         print("IPS 안씀")
-                        funused.write("Service :" + service + " Connect IP : " + lhost_ip)
+                        funused.write("Service :" + service + " Connect IP : " + lhost_ip + "\n")
 
                     elif result > 0:
                         print("IPS 사용중")
-                        fused.write("Service :" + service + " Connect IP : " + lhost_ip)
+                        fused.write("Service :" + service + " Connect IP : " + lhost_ip  + "\n")
 
                     ssh_client.close()
 
@@ -86,13 +87,13 @@ class getstart():
                     print("Noop")
 
 
-        #except Exception as e:
-        #    print("Except: " + str(e))
+        except Exception as e:
+            print("Except: " + str(e))
 
         except:
             print("Unknown Exception")
 
-        # f.close()
+         #f.close()
 
 
 if __name__ == "__main__":
