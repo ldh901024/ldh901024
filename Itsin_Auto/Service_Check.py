@@ -60,8 +60,6 @@ class getstart():
                 if num >= list_len:
                     break
 
-                    # raise NotImplementedError
-                    print("오류발생 Pass!")
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
                     try:
@@ -89,8 +87,8 @@ class getstart():
 
                     ssh_client.close()
 
-                else:
-                    print("Noop")
+            else:
+                print("Noop")
         """
         try:
             #raise NotImplementedError
