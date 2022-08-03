@@ -73,7 +73,7 @@ class getstart():
                     except Exception as e:
                         print("Except: " + str(e))
                         continue
-
+                    print(lhost_ip + " 시도중")
                     cli = "config firewall policy"
                     stdin, stdout, stderr = ssh_client.exec_command(cli)
 
