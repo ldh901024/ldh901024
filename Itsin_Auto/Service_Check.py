@@ -72,8 +72,7 @@ class getstart():
 
                     except Exception as e:
                         print("Except: " + str(e))
-                        pass
-
+                        continue
 
                     cli = "config firewall policy"
                     stdin, stdout, stderr = ssh_client.exec_command(cli)
@@ -95,9 +94,6 @@ class getstart():
 
                 else:
                     print("Noop")
-
-        except TimeOutException as e:
-            print(e)
 
         except Exception as e:
             print("Except: " + str(e))
