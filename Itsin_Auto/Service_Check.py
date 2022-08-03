@@ -70,29 +70,27 @@ class getstart():
                         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                         ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
 
+                        print(lhost_ip + " 시도중")
+                        cli = "config firewall policy"
+                        stdin, stdout, stderr = ssh_client.exec_command(cli, timeout=10)
+
+                        cli = "sh \| grep ips-sensor"
+                        stdin, stdout, stderr = ssh_client.exec_command(cli, timeout=10)
+                        msg = self.outdata(stdout)
+
+                        result = msg.find('set ips-sensor')
+                        if result == -1:
+                            print("IPS 안씀")
+                            funused.write("Service :" + service + " Connect IP : " + lhost_ip + "\n")
+
+                        elif result > 0:
+                            print("IPS 사용중")
+                            fused.write("Service :" + service + " Connect IP : " + lhost_ip  + "\n")
+
+                        ssh_client.close()
                     except Exception as e:
-                        print("Except: " + str(e))
+                        print("For Except: " + str(e))
                         continue
-
-                    print(lhost_ip + " 시도중")
-                    cli = "config firewall policy"
-                    stdin, stdout, stderr = ssh_client.exec_command(cli, timeout=10)
-
-                    cli = "sh \| grep ips-sensor"
-                    stdin, stdout, stderr = ssh_client.exec_command(cli, timeout=10)
-                    msg = self.outdata(stdout)
-
-                    result = msg.find('set ips-sensor')
-                    if result == -1:
-                        print("IPS 안씀")
-                        funused.write("Service :" + service + " Connect IP : " + lhost_ip + "\n")
-
-                    elif result > 0:
-                        print("IPS 사용중")
-                        fused.write("Service :" + service + " Connect IP : " + lhost_ip  + "\n")
-
-                    ssh_client.close()
-
                 else:
                     print("놉")
 
