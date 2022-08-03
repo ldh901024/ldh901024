@@ -58,7 +58,7 @@ class getstart():
                     break
 
         try:
-            raise NotImplementedError
+            #raise NotImplementedError
             print("오류발생 Pass!")
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
