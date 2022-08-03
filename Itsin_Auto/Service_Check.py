@@ -62,9 +62,14 @@ class getstart():
             print("오류발생 Pass!")
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
-                    ssh_client = paramiko.SSHClient()
-                    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                    ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
+                    try:
+                        ssh_client = paramiko.SSHClient()
+                        ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                        ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
+
+                    except Exception as e:
+                        print("Except: " + str(e))
+
 
                     cli = "config firewall policy"
                     stdin, stdout, stderr = ssh_client.exec_command(cli)
@@ -90,7 +95,7 @@ class getstart():
 
         except Exception as e:
             print("Except: " + str(e))
-            pass
+
 
         except:
             print("Unknown Exception")
