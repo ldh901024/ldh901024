@@ -60,45 +60,20 @@ class getstart():
                 if num >= list_len:
                     break
 
+        try:
+            #raise NotImplementedError
+            print("오류발생 Pass!")
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 if service == "MSS":
                     try:
                         ssh_client = paramiko.SSHClient()
                         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                         ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
+
                     except Exception as e:
                         print("Except: " + str(e))
+                        pass
 
-                    cli = "config firewall policy"
-                    stdin, stdout, stderr = ssh_client.exec_command(cli)
-
-                    cli = "sh \| grep ips-sensor"
-                    stdin, stdout, stderr = ssh_client.exec_command(cli)
-                    msg = self.outdata(stdout)
-
-                    result = msg.find('set ips-sensor')
-                    if result == -1:
-                        print("IPS 안씀")
-                        funused.write("Service :" + service + " Connect IP : " + lhost_ip + "\n")
-
-                    elif result > 0:
-                        print("IPS 사용중")
-                        fused.write("Service :" + service + " Connect IP : " + lhost_ip + "\n")
-
-                    ssh_client.close()
-
-                else:
-                    print("Noop")
-        """
-        try:
-            #raise NotImplementedError
-            print("오류발생 Pass!")
-            for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
-                if service == "MSS":
-
-                    ssh_client = paramiko.SSHClient()
-                    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                    ssh_client.connect(lhost_ip, username=lhost_id, password=lhost_pw, port=lhost_port, timeout=10)
 
                     cli = "config firewall policy"
                     stdin, stdout, stderr = ssh_client.exec_command(cli)
@@ -133,7 +108,7 @@ class getstart():
             pass
 
          #f.close()
-        """
+
 
 if __name__ == "__main__":
     getssluser = getstart()
