@@ -61,22 +61,71 @@ class Compare_result():
         try:
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            ssh_client.connect(host,username=id,password=pw,port=port_num, timeout=10)
+            ssh_client.connect(host, username=id, password=pw, port=port_num, timeout=10)
 
             channel = ssh_client.invoke_shell()
-            channel.settimeout(30)        
-            
-            channel.send(pw+'\n')
-            outdata, errdata = self.waitStrems(channel)
-            print("\n")
-            print(outdata)
-            
+            channel.settimeout(30)
+
+            out = channel.recv(9999)
+
+            while True:
+                if "Username" in out.decode("utf-8"):
+                    channel.send(id)
+                    channel.send("\n")
+                    while not channel.recv_ready():
+                        time.sleep(3)
+
+                    out = channel.recv(9999)
+                    time.sleep(1)
+
+                elif "Password" in out.decode("utf-8"):
+                    channel.send(pw)
+                    channel.send("\n")
+                    while not channel.recv_ready():
+                        time.sleep(3)
+
+                    out = channel.recv(9999)
+                    time.sleep(1)
+
+                else:
+                    break
+
+            result = ''
             channel.send(cmd+'\n')
-            outdata, errdata = self.waitStrems(channel)
-            print("\n")
-            print(outdata)
+
+            while not channel.recv_ready():
+                time.sleep(3)
+
+            out=channel.recv(9999).decode('utf-8')
+
+            while out:
+                if "--More--" in out:
+                    result = result + '\n'
+                    result = result + out
+                    with open("./morefile.txt", 'a', encoding='utf-8') as f:
+                        print(out, file=f)
+                    out = ''
+                    channel.send(' ')
+                    time.sleep(1)
+                    if channel.recv_ready():
+                        out = channel.recv(9999).decode('utf-8')
+
+
+                elif out != "":
+                    result = result + '\n'
+                    result = result + out
+                    out = ''
+                    if channel.recv_ready():
+                        out = channel.recv(9999).decode('utf-8')
+                    time.sleep(1)
+                    with open("./nomorefile.txt", 'a', encoding='utf-8') as s:
+                        print(out, file=s)
+
+                else:
+                    break
 
             channel.close()
+            return result
 
         except Exception as e:
             print(e)
@@ -86,8 +135,6 @@ class Compare_result():
             print("SSH_Connection Error")
 
     def SSH_SCPCheck(self,host,id,pw,port_num,cmd):
-        print(host,id,pw,port_num)
-        print("scpcheck")
         try:
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())

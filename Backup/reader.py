@@ -9,7 +9,7 @@ import compare
 class getstart():
     def run_getstart(self, args):
 
-        with open('/NAS/ll.csv','r') as csv_file:
+        with open("C:\\Users\\ldh\\Downloads\\ll.csv", 'r', encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file)        
             array2d=list(csv_reader)
 
@@ -74,17 +74,23 @@ class getstart():
                 lhost_port = re.sub("[\[\]\']","",str(lhost_port))
                 #======================================================================#
 
-                result = scheck.service_check(vendor,service) 
+                result = scheck.service_check(vendor,service)
+
                 if result == "MSS_FG":
                     scpcmd="get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip,lhost_id,lhost_pw,lhost_port,scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path)
                     findcmd = findfile
                     mssFGCnt += 1
-                elif result == "No_MSS_Axgate":
-                    Axgate_cmd="backup config 210.103.187.138 ftp port 21 path Configbackup/Axgate_temp/MSS/{t_filename} login itsinftps Ksv-=6".format(t_filename=lfilename)
-                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip,lhost_id,lhost_pw+'\n',lhost_port,local_path,Axgate_cmd)
-                    findcmd = findfile_Axgate
+                elif result == "MSS_Axgate":
+                    Axgate_cmd='sh run'
+                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port, local_path, Axgate_cmd)
+                    ssh_result = ssh_result.replace("","")
+                    ssh_result = ssh_result.replace("--More--","")
+                    with open('./result2.txt', 'w', encoding='utf-8') as f:
+                        print(ssh_result, file=f)
+
+                    #findcmd = findfile_Axgate
                     mssAXCnt += 1
                    
                 elif result == "Maintain_FG":
@@ -93,16 +99,22 @@ class getstart():
                     findcmd = findfile
                     maintainFGCnt += 1
                 elif result == "No_Maintain_Axgate":
-                    Axgate_cmd="backup config 210.103.187.138 ftp port 21 path Configbackup/Axgate_temp/Maintain/{t_filename} login itsinftps Ksv-=6".format(t_filename=lfilename)
-                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path,Axgate_cmd)
-                    findcmd = findfile_Axgate
+                    Axgate_cmd = 'sh run'
+                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,
+                                                              local_path, Axgate_cmd)
+                    ssh_result = ssh_result.replace("", "")
+                    ssh_result = ssh_result.replace("--More--", "")
+                    with open('./result2.txt', 'w', encoding='utf-8') as f:
+                        print(ssh_result, file=f)
+
+                    # findcmd = findfile_Axgate
                     maintainAXCnt += 1
                 else:
                     print("기타장비\n")
 
                 
                 #==================file check============================
-                scheck.FileCheck(findcmd,service,vendor,lhost_ip)
+                #scheck.FileCheck(findcmd,service,vendor,lhost_ip)
 
                 if arraylen <= fornum:
                     continue 
