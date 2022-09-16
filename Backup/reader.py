@@ -98,7 +98,7 @@ class getstart():
                     ssh_result = scheck.SSH_Connection(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path)
                     findcmd = findfile
                     maintainFGCnt += 1
-                elif result == "No_Maintain_Axgate":
+                elif result == "Maintain_Axgate":
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,
                                                               local_path, Axgate_cmd)
