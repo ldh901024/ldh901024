@@ -100,8 +100,7 @@ class getstart():
                     maintainFGCnt += 1
                 elif result == "Maintain_Axgate":
                     Axgate_cmd = 'sh run'
-                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,
-                                                              local_path, Axgate_cmd)
+                    ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,local_path, Axgate_cmd)
                     ssh_result = ssh_result.replace("", "")
                     ssh_result = ssh_result.replace("--More--", "")
                     with open('./result2.txt', 'w', encoding='utf-8') as f:

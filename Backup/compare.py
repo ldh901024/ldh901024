@@ -51,6 +51,7 @@ class Compare_result():
                 scp.get("/sys_config", local_path)
                 ssh_client.close()
                 return True
+
         except SCPException:
             return False
         except:
