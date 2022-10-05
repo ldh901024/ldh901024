@@ -9,7 +9,8 @@ import compare
 class getstart():
     def run_getstart(self, args):
 
-        with open("C:\\Users\\ldh\\Downloads\\ll.csv", 'r', encoding='utf-8') as csv_file:
+        #with open("C:\\Users\\ldh\\Downloads\\ll.csv", 'r', encoding='utf-8') as csv_file:
+        with open("/NAS/ll.csv", 'r', encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file)        
             array2d=list(csv_reader)
 
