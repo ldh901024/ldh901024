@@ -90,10 +90,11 @@ class getstart():
                 elif result == "MSS_Axgate":
                     Axgate_cmd='sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port, local_path, Axgate_cmd)
-                    ssh_result = ssh_result.replace("","")
-                    ssh_result = ssh_result.replace("--More--","")
-                    with open(local_path_Axgate, 'w', encoding='utf-8') as f:
-                        print(ssh_result, file=f)
+                    if not isinstance(ssh_result, bool):
+                        ssh_result = ssh_result.replace("", "")
+                        ssh_result = ssh_result.replace("--More--", "")
+                        with open(local_path_Axgate, 'w', encoding='utf-8') as f:
+                            print(ssh_result, file=f)
 
                     #findcmd = findfile_Axgate
                     mssAXCnt += 1
@@ -107,10 +108,11 @@ class getstart():
                 elif result == "Maintain_Axgate":
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,local_path, Axgate_cmd)
-                    ssh_result = ssh_result.replace("", "")
-                    ssh_result = ssh_result.replace("--More--", "")
-                    with open(local_path_Axgate, 'w', encoding='utf-8') as f:
-                        print(ssh_result, file=f)
+                    if not isinstance(ssh_result, bool):
+                        ssh_result = ssh_result.replace("", "")
+                        ssh_result = ssh_result.replace("--More--", "")
+                        with open(local_path_Axgate, 'w', encoding='utf-8') as f:
+                            print(ssh_result, file=f)
 
                     # findcmd = findfile_Axgate
                     maintainAXCnt += 1
