@@ -57,6 +57,7 @@ class getstart():
         try:
             arraylen=len(array)
             fornum=2
+            local_path = ""
 
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 #=============================cmd and file_path Information====================
