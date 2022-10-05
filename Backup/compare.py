@@ -122,6 +122,10 @@ class Compare_result():
                     break
 
             channel.close()
+
+            if isinstance(result, bool):
+                result = "false"
+
             return result
 
         except Exception as e:
