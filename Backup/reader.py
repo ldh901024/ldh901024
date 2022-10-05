@@ -60,10 +60,12 @@ class getstart():
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 #=============================cmd and file_path Information====================
                 lfilename=lhost_ip + ".conf"
-                local_path="/backup_data/{t_service}/{t_vendor}/{t_filename}".format(t_service=service,t_vendor=vendor,t_filename=lfilename)
-                local_path_Axgate="/NAS/Axgate_temp/{t_service}/{t_filename}".format(t_service=service,t_filename=lfilename)
                 findfile="ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path, t_filename=lfilename)
+                local_path = "/backup_Config/{t_service}/{t_vendor}/{t_filename}".format(t_service=service, t_vendor=vendor, t_filename=lfilename)
+                local_path_Axgate = "/backup_Config/{t_service}/{t_vendor}/{t_filename}".format(t_service=service, t_vendor=vendor, t_filename=lfilename)
                 findfile_Axgate="ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path_Axgate, t_filename=lfilename)
+                print(local_path)
+                print(local_path_Axgate)
                 #==============================================================================
                 #=======================String Clear===================================#
                 service = re.sub("[\[\]\']","",str(service))
@@ -76,6 +78,7 @@ class getstart():
 
                 result = scheck.service_check(vendor,service)
 
+
                 if result == "MSS_FG":
                     scpcmd="get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip,lhost_id,lhost_pw,lhost_port,scpcmd)
@@ -87,7 +90,7 @@ class getstart():
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port, local_path, Axgate_cmd)
                     ssh_result = ssh_result.replace("","")
                     ssh_result = ssh_result.replace("--More--","")
-                    with open('./result2.txt', 'w', encoding='utf-8') as f:
+                    with open(local_path_Axgate, 'w', encoding='utf-8') as f:
                         print(ssh_result, file=f)
 
                     #findcmd = findfile_Axgate
@@ -98,12 +101,13 @@ class getstart():
                     ssh_result = scheck.SSH_Connection(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path)
                     findcmd = findfile
                     maintainFGCnt += 1
+
                 elif result == "Maintain_Axgate":
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,local_path, Axgate_cmd)
                     ssh_result = ssh_result.replace("", "")
                     ssh_result = ssh_result.replace("--More--", "")
-                    with open('./result2.txt', 'w', encoding='utf-8') as f:
+                    with open(local_path_Axgate, 'w', encoding='utf-8') as f:
                         print(ssh_result, file=f)
 
                     # findcmd = findfile_Axgate

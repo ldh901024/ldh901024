@@ -103,8 +103,6 @@ class Compare_result():
                 if "--More--" in out:
                     result = result + '\n'
                     result = result + out
-                    with open("./morefile.txt", 'a', encoding='utf-8') as f:
-                        print(out, file=f)
                     out = ''
                     channel.send(' ')
                     time.sleep(1)
@@ -119,8 +117,6 @@ class Compare_result():
                     if channel.recv_ready():
                         out = channel.recv(9999).decode('utf-8')
                     time.sleep(1)
-                    with open("./nomorefile.txt", 'a', encoding='utf-8') as s:
-                        print(out, file=s)
 
                 else:
                     break
