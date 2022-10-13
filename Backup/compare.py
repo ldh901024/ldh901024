@@ -173,8 +173,11 @@ class Compare_result():
             file_check.writelines(filecmd)
         else:
             print("find!!!!")
+            find = 1
 
         file_check.close
+
+        return find
 
 
 

@@ -9,7 +9,6 @@ import compare
 class getstart():
     def run_getstart(self, args):
 
-        #with open("C:\\Users\\ldh\\Downloads\\ll.csv", 'r', encoding='utf-8') as csv_file:
         with open("/NAS/ll.csv", 'r', encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file)        
             array2d=list(csv_reader)
@@ -62,12 +61,10 @@ class getstart():
             for service, vendor, lhost_ip, lhost_port, lhost_id, lhost_pw in array:
                 #=============================cmd and file_path Information====================
                 lfilename=lhost_ip + ".conf"
-                findfile="ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path, t_filename=lfilename)
                 local_path = "/backup_Config/{t_service}/{t_vendor}/{t_filename}".format(t_service=service, t_vendor=vendor, t_filename=lfilename)
                 local_path_Axgate = "/backup_Config/{t_service}/{t_vendor}/{t_filename}".format(t_service=service, t_vendor=vendor, t_filename=lfilename)
+                findfile = "ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path,t_filename=lfilename)
                 findfile_Axgate="ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path_Axgate, t_filename=lfilename)
-                print(local_path)
-                print(local_path_Axgate)
                 #==============================================================================
                 #=======================String Clear===================================#
                 service = re.sub("[\[\]\']","",str(service))
@@ -79,7 +76,6 @@ class getstart():
                 #======================================================================#
 
                 result = scheck.service_check(vendor,service)
-
 
                 if result == "MSS_FG":
                     scpcmd="get sys gl | grep scp"

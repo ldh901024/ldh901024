@@ -24,22 +24,23 @@ class start():
         }
         response = requests.get(url=url, headers=headers, params=parameters)
         json_Data = json.loads(response.content)
-        json_main = json_Data['data']
-
+        json_main = json_Data['data']['abuseConfidenceScore']
         print(json_main)
+        print(type(json_main))
+        tempint=str(json)
 
         level = 0
         #facility = "info"
-        host = '210.103.187.27'
-        port = 514
-        message = json_main
+        #host = '210.103.187.27'
+        #port = 514
+        #message = json_main
 
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        data = '<%d>%s' % (level, message)
-        data_byte = data.encode('utf-8')
+        #sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        #data = '<%d>%s' % (level, message)
+        #data_byte = data.encode('utf-8')
 
-        sock.sendto(data_byte, (host, port))
-        sock.close()
+        #sock.sendto(data_byte, (host, port))
+        #sock.close()
 
 
 if __name__ == "__main__":

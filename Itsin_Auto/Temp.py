@@ -20,7 +20,7 @@ class start():
 
         level = 0
         #facility = "info"
-        host = '172.16.21.175'
+        host = '210.103.187.25'
         port = 514
         message = str(data)
 
