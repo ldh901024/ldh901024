@@ -120,7 +120,7 @@ class getstart():
                 #==================file check============================
                 refindresult=scheck.FileCheck(findcmd,service,vendor,lhost_ip)
 
-                if refindresult = True:
+                if refindresult == True:
                     print("Backup Success")
                 else:
                     with open('/backupfalse.txt', 'a') as falsetxt:

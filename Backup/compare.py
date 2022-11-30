@@ -170,10 +170,12 @@ class Compare_result():
         file_check = open('/NAS/false_check.txt','a')
         if find == os.system(cmd):
             print("find!!!!")
-            find = 1
+            find = False
+
         else:
             filecmd = service + " " + vendor + " " + hostip + "\n"
             file_check.writelines(filecmd)
+            find = True
 
         file_check.close
 
