@@ -125,6 +125,7 @@ class getstart():
                 else:
                     with open('/backupfalse.txt', 'a') as falsetxt:
                         falsetxt.writelines(lhost_ip)
+                        falsetxt.writelines('\n')
 
                 if arraylen <= fornum:
                     continue 
