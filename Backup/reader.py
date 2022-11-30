@@ -126,7 +126,10 @@ class getstart():
 
             with open('./backup_result','w') as bresult:
                 bresult.writelines(mssFGCnt)
+                bresult.writelines(mssAXCnt)
                 bresult.writelines(maintainFGCnt)
+                bresult.writelines(maintainAXCnt)
+
                 
         except Exception as e:
             print("Except: " + str(e))
