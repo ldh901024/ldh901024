@@ -124,7 +124,7 @@ class getstart():
 
                 fornum=fornum+1
 
-            with open('./backup_result','w') as bresult:
+            with open('./backup_result', 'w') as bresult:
                 bresult.writelines(mssFGCnt)
                 bresult.writelines(mssAXCnt)
                 bresult.writelines(maintainFGCnt)
