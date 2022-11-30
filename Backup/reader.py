@@ -78,12 +78,15 @@ class getstart():
                 result = scheck.service_check(vendor,service)
 
                 if result == "MSS_FG":
+                    mssFGCnt += 1
+                    findcmd = findfile
                     scpcmd="get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip,lhost_id,lhost_pw,lhost_port,scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path)
-                    findcmd = findfile
-                    mssFGCnt += 1
+
                 elif result == "MSS_Axgate":
+                    mssAXCnt += 1
+                    findcmd = findfile_Axgate
                     Axgate_cmd='sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port, local_path, Axgate_cmd)
                     if not isinstance(ssh_result, bool):
@@ -92,16 +95,16 @@ class getstart():
                         with open(local_path_Axgate, 'w', encoding='utf-8') as f:
                             print(ssh_result, file=f)
 
-                    #findcmd = findfile_Axgate
-                    mssAXCnt += 1
-                   
                 elif result == "Maintain_FG":
+                    maintainFGCnt += 1
+                    findcmd = findfile
+                    scpcmd = "get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip,lhost_id,lhost_pw,lhost_port,scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip,lhost_id,lhost_pw,lhost_port,local_path)
-                    findcmd = findfile
-                    maintainFGCnt += 1
 
                 elif result == "Maintain_Axgate":
+                    maintainAXCnt += 1
+                    findcmd = findfile_Axgate
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,local_path, Axgate_cmd)
                     if not isinstance(ssh_result, bool):
@@ -110,14 +113,18 @@ class getstart():
                         with open(local_path_Axgate, 'w', encoding='utf-8') as f:
                             print(ssh_result, file=f)
 
-                    # findcmd = findfile_Axgate
-                    maintainAXCnt += 1
                 else:
                     print("기타장비\n")
 
                 
                 #==================file check============================
-                #scheck.FileCheck(findcmd,service,vendor,lhost_ip)
+                refindresult=scheck.FileCheck(findcmd,service,vendor,lhost_ip)
+
+                if refindresult = True:
+                    print("Backup Success")
+                else:
+                    with open('/backupfalse.txt', 'a') as falsetxt:
+                        falsetxt.writelines(lhost_ip)
 
                 if arraylen <= fornum:
                     continue 
