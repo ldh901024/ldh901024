@@ -181,7 +181,7 @@ class Compare_result():
         if findresult == True:
             print("Backup Success")
         else:
-            if serviceresult in "MSS":
+            if "MSS" in serviceresult:
                 with open('/NAS/MSS_False.txt', 'a') as falsetxt:
                     falsetxt.writelines(host)
                     falsetxt.writelines('\n')
