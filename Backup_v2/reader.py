@@ -7,7 +7,7 @@ import compare
 class getstart():
     def run_getstart(self, args):
 
-        with open("/NAS/backuptest.csv", 'r', encoding='utf-8') as csv_file:
+        with open("/NAS/ll.csv", 'r', encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file)        
             array2d=list(csv_reader)
 
@@ -126,11 +126,11 @@ class getstart():
 
                 fornum=fornum+1
 
-            with open('./backup_result', 'w') as bresult:
-                bresult.writelines(mssFGCnt)
-                bresult.writelines(mssAXCnt)
-                bresult.writelines(maintainFGCnt)
-                bresult.writelines(maintainAXCnt)
+            with open('/NAS/backup_result', 'w') as bresult:
+                bresult.writelines("MSS FG Count: " + mssFGCnt)
+                bresult.writelines("MSS Axgate Count: "+ mssAXCnt)
+                bresult.writelines("Maintain FG Count: "+ maintainFGCnt)
+                bresult.writelines("Maintain Axgate Count: "+ maintainAXCnt)
 
                 
         except Exception as e:
