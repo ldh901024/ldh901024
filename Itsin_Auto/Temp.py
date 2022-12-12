@@ -20,9 +20,10 @@ class start():
 
         level = 0
         #facility = "info"
-        host = '210.103.187.25'
+        host = '210.103.187.28'
         port = 514
-        message = str(data)
+        #message = str(data)
+        message = "CEF:0|Symantec|DataLossPrevention|11.5|Policy123|Policy123|5|cs1Label=Sender cs1=sender123 cs2Label=Recipient cs2=recepient123 msg=rule123 cn1=1 cn1Label=MatchCount cs3Label=IncidentSnapshot cs3=123 cs4Label=DLPSeverity cs4=1 suid=123CEF:0|Symantec|DataLossPrevention|11.5|Policy456|Policy456|5|cs1Label=Sender cs1=sender456 cs2Label=Recipient cs2=recepient456 msg=rule456 cn1=1 cn1Label=MatchCount cs3Label=IncidentSnapshot cs3=456 cs4Label=DLPSeverity cs4=1 suid=456"
 
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         data = '<%d>%s' % (level, message)
