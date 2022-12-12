@@ -167,17 +167,13 @@ class Compare_result():
 
     def FileCheck(self,cmd,service,vendor,hostip):
         find=0
-        file_check = open('/NAS/false_check.txt','a')
         if find == os.system(cmd):
             print("find!!!!")
-            find = False
+            find = True
 
         else:
             filecmd = service + " " + vendor + " " + hostip + "\n"
-            file_check.writelines(filecmd)
-            find = True
-
-        file_check.close
+            find = False
 
         return find
 
@@ -185,7 +181,7 @@ class Compare_result():
         if findresult == True:
             print("Backup Success")
         else:
-            with open('/backupfalse.txt', 'a') as falsetxt:
+            with open('/NAS/backupfalse.txt', 'a') as falsetxt:
                 falsetxt.writelines(host)
                 falsetxt.writelines('\n')
 
