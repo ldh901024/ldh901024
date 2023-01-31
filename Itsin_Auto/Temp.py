@@ -1,3 +1,5 @@
+import time
+
 import requests
 import json
 import sys
@@ -11,25 +13,49 @@ import argparse
 class start():
     def run_start(self, args):
 
-        f = open('C:\Temp\syslog.txt', 'r', encoding='UTF-8')
-        data = ''
-        lines = f.readlines()
-        for line in lines:
-            data += line
-        f.close()
-
-        level = 0
-        #facility = "info"
-        host = '210.103.187.28'
+        host = '210.103.187.25'
         port = 514
-        #message = str(data)
-        message = "CEF:0|Symantec|DataLossPrevention|11.5|Policy123|Policy123|5|cs1Label=Sender cs1=sender123 cs2Label=Recipient cs2=recepient123 msg=rule123 cn1=1 cn1Label=MatchCount cs3Label=IncidentSnapshot cs3=123 cs4Label=DLPSeverity cs4=1 suid=123CEF:0|Symantec|DataLossPrevention|11.5|Policy456|Policy456|5|cs1Label=Sender cs1=sender456 cs2Label=Recipient cs2=recepient456 msg=rule456 cn1=1 cn1Label=MatchCount cs3Label=IncidentSnapshot cs3=456 cs4Label=DLPSeverity cs4=1 suid=456"
 
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        data = '<%d>%s' % (level, message)
-        data_byte = data.encode('utf-8')
+        f = open('C:\\Users\\ldh\\Downloads\\wapple.csv', 'r', encoding='UTF-8')
+        rdr = csv.reader(f)
+        #data = ''
+        data = []
+        for line in rdr:
+            data.append('[WAF]'.join(line))
+        i=0
+        print(data)
+        #for line in data:
+            #print(str(i) + "번째 줄 : ")
+            #print(line)
+            #sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            #data_byte = line.encode('utf-8')
+            #sock.sendto(data_byte, (host, port))
 
-        sock.sendto(data_byte, (host, port))
+            #if i==30:
+                #break
+
+            #i += 1
+        #    data += line
+        #f.close()
+        #level = 0
+        #facility = "info"
+
+
+
+        """
+        break_num = 0
+        sleep_num = 0
+        while True:
+            sock.sendto(data_byte, (host, port))
+            if break_num > 27145:
+                break
+            if sleep_num > 500:
+                sleep_num = 0
+                time.sleep(1)
+
+            break_num += 1
+            sleep_num += 1
+        """
         sock.close()
 
 
