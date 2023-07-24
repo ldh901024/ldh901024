@@ -1,8 +1,6 @@
 import re
 
-
-
-data = '<35>Aug 11 10:11:12|FG100E|Ping.(Ping)|Down.(before:.Down.(Partial))|.(The.sensor.shows.a.Down.status.because.of.a.simulated.error..To.resolve.this.issue,.right-click.the.sensor.and.select."Resume".from.the.context.menu..(code:.PE034))|Sensor.:.|15439'
+data = 'FG100E|Ping.(Ping)|Down.(before:.Down.(Partial))|.(The.sensor.shows.a.Down.status.because.of.a.simulated.error..To.resolve.this.issue,.right-click.the.sensor.and.select."Resume".from.the.context.menu..(code:.PE034))|Sensor.:.|15439'
 
 values = dict()
 
@@ -15,12 +13,25 @@ if res:
 
     spl = re.split(r'(?<!\\)\|', header)
 
-    values["test0"] = spl[0]
-    values["test1"] = spl[1]
-    values["test2"] = spl[2]
-    values["test3"] = spl[3]
-    values["test4"] = spl[4]
+    values["device"] = spl[0]
+    values["SensorName"] = spl[1]
+    values["status"] = spl[2]
+    values["message"] = spl[3]
+    values["sensor"] = spl[4]
+    values["sensori"] = spl[5]
+
+    result = dict()
+
+    for key in values.keys():
+        result[key] = values[key]
+
+
     if len(spl) > 6:
         values["DeviceSeverity"] = spl[6]
+
+    dictkey = values.values()
+
+    for str in dictkey:
+        print(str)
 
 

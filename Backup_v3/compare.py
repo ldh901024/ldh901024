@@ -43,9 +43,6 @@ class Compare_result():
 
     def SSH_Connection(self,host,id,pw,port_num,local_path):
         try:
-            with open("/NAS/trydevice.txt", 'a', encoding='utf-8') as file:
-                file.writelines(host+" / ID : "+id+" / PW : "+pw+" / Port : "+port_num)
-
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             ssh_client.connect(host,username=id,password=pw,port=port_num, timeout=10)
@@ -167,6 +164,18 @@ class Compare_result():
         except:
             print("Compare Exception")
 
+
+    def FileCheck(self,cmd,service,vendor,hostip):
+        find=0
+        if find == os.system(cmd):
+            print("find!!!!")
+            find = True
+
+        else:
+            filecmd = service + " " + vendor + " " + hostip + "\n"
+            find = False
+
+        return find
 
     def FalseFileWrite(self,findresult,host,serviceresult):
         if findresult == True:

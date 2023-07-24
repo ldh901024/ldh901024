@@ -1,5 +1,5 @@
 import time
-
+import numpy as np
 import requests
 import json
 import sys
@@ -13,10 +13,10 @@ import argparse
 class start():
     def run_start(self, args):
 
-        host = '210.103.187.25'
-        port = 514
+        host = '210.103.187.28'
+        port = 10518
 
-        f = open('C:\\Users\\ldh\\Downloads\\wapple.csv', 'r', encoding='UTF-8')
+        #f = open('C:\\Users\\ldh\\Downloads\\wapple.csv', 'r', encoding='UTF-8')
         rdr = csv.reader(f)
         #data = ''
         data = []
