@@ -63,6 +63,12 @@ class getstart():
                 if num >= list_len:
                     break
         # ========================================================#
+        with open("./list.txt", 'a', encoding='utf-8') as list_file:
+            list_file.write('\n'.join(map(str,array)))
+            list_file.close()
+       
+        ####### CUtting
+        sys.exit()
 
         try:
             arraylen = len(array)
