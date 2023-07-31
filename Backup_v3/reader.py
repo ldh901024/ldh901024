@@ -1,9 +1,11 @@
 import csv
 import os
 import sys
-
 import compare
 
+import traceback
+import logging
+logging.basicConfig(level=logging.ERROR)
 
 class getstart():
     global mssFGCnt
@@ -149,6 +151,7 @@ class getstart():
 
 
         except Exception as e:
+            traceback.print_exe()
             print("Except: " + str(e))
 
         except:
