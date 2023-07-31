@@ -83,10 +83,6 @@ class getstart():
                 local_path_Axgate = "/backup_Config/{t_service}/{t_vendor}/{t_filename}".format(t_service=service,
                                                                                                 t_vendor=vendor,
                                                                                                 t_filename=lfilename)
-                findfile = "ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path,
-                                                                              t_filename=lfilename)
-                findfile_Axgate = "ls -al {t_local_path} | grep {t_filename}".format(t_local_path=local_path_Axgate,
-                                                                                     t_filename=lfilename)
                 # ==============================================================================
                 """
                 #=======================String Clear===================================#
@@ -102,7 +98,6 @@ class getstart():
 
                 if result == "MSS_FG":
                     mssFGCnt += 1
-                    findcmd = findfile
                     scpcmd = "get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip, lhost_id, lhost_pw, lhost_port, scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip, lhost_id, lhost_pw, lhost_port, local_path)
@@ -110,7 +105,6 @@ class getstart():
 
                 elif result == "MSS_Axgate":
                     mssAXCnt += 1
-                    findcmd = findfile_Axgate
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,
                                                               local_path, Axgate_cmd)
@@ -122,14 +116,12 @@ class getstart():
 
                 elif result == "Maintain_FG":
                     maintainFGCnt += 1
-                    findcmd = findfile
                     scpcmd = "get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip, lhost_id, lhost_pw, lhost_port, scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip, lhost_id, lhost_pw, lhost_port, local_path)
 
                 elif result == "Maintain_Axgate":
                     maintainAXCnt += 1
-                    findcmd = findfile_Axgate
                     Axgate_cmd = 'sh run'
                     ssh_result = scheck.SSH_Connection_Axgate(lhost_ip, lhost_id, lhost_pw + '\n', lhost_port,
                                                               local_path, Axgate_cmd)
@@ -143,15 +135,15 @@ class getstart():
                     print("기타장비\n")
 
                 # ==================file check============================
-                refindresult = scheck.FileCheck(findcmd, service, vendor, lhost_ip)
-                scheck.FalseFileWrite(refindresult, lhost_ip, result)
+
+                scheck.FalseFileWrite(lhost_ip, service, vendor)
 
                 if arraylen <= fornum:
                     continue
 
                 fornum = fornum + 1
 
-            with open('/NAS/backup_result', 'w') as bresult:
+            with open('/NAS/backup_result', 'a') as bresult:
                 bresult.writelines("MSS FG Count: " + mssFGCnt)
                 bresult.writelines("MSS Axgate Count: " + mssAXCnt)
                 bresult.writelines("Maintain FG Count: " + maintainFGCnt)

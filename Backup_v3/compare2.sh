@@ -8,7 +8,9 @@ file_search_string="${search_string}${conf_string}"
 
 if [ -e "${search_directory}/${file_search_string}" ]
 then
-    echo "${file_search_string}: 존재합니다."
+    #echo "${file_search_string}: 존재합니다."
+    echo "success"
 else
-    echo "${file_search_string}: 존재하지 않습니다."
+    #echo "${file_search_string}: 존재하지 않습니다."
+    echo "false"
 fi

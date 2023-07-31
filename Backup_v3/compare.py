@@ -177,17 +177,33 @@ class Compare_result():
 
         return find
 
-    def FalseFileWrite(self,findresult,host,serviceresult):
+    def FalseFileWrite(self,host,service,vendor):
+        /usr/local/backup/Backup_v3/compare2.sh
         if findresult == True:
             print("Backup Success")
         else:
-            if "MSS" in serviceresult:
-                with open('/NAS/MSS_False.txt', 'a') as falsetxt:
-                    falsetxt.writelines(host)
-                    falsetxt.writelines('\n')
+            if "MSS" in service:
+                if "Backup_FG" in vendor:
+                    search_dir="/backup_Config/MSS/Backup_FG"
+                    with open('/NAS/MSS_False.txt', 'a') as falsetxt:
+                        falsetxt.writelines(host)
+                        falsetxt.writelines('\n')
+                
+                elif "Backup_Axgate" in vendor:
+                    search_dir="/backup_Config/MSS/Backup_Axgate"
+                    with open('/NAS/MSS_False.txt', 'a') as falsetxt:
+                        falsetxt.writelines(host)
+                        falsetxt.writelines('\n')
 
-            else:
-                with open('/NAS/Maintain_False.txt', 'a') as falsetxt:
-                    falsetxt.writelines(host)
-                    falsetxt.writelines('\n')
-
+            elif "Maintain" in service:
+                if "Backup_FG" in vendor:
+                    search_dir="/backup_Config/Maintain/Backup_FG"
+                    with open('/NAS/Maintain_False.txt', 'a') as falsetxt:
+                        falsetxt.writelines(host)
+                        falsetxt.writelines('\n')
+                
+                elif "Backup_Axgate" in vendor:
+                    search_dir="/backup_Config/Maintain/Backup_Axgate"
+                    with open('/NAS/Maintain_False.txt', 'a') as falsetxt:
+                        falsetxt.writelines(host)
+                        falsetxt.writelines('\n')
