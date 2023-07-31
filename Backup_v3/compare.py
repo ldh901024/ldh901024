@@ -4,6 +4,7 @@ import paramiko
 import time
 import pdb
 import pickle
+import subprocess
 from scp import SCPClient, SCPException
 
 
@@ -178,32 +179,33 @@ class Compare_result():
         return find
 
     def FalseFileWrite(self,host,service,vendor):
-        /usr/local/backup/Backup_v3/compare2.sh
-        if findresult == True:
+        base_path="/backup_Config"
+        file_path=base_path + "/" + service + "/" + vendor
+
+        result = subprocess.check_output(['/usr/local/backup/Backup_v3/compare2.sh', host, file_path])
+        result = result.decode("utf-8")
+
+        if result == "success":
             print("Backup Success")
         else:
             if "MSS" in service:
                 if "Backup_FG" in vendor:
-                    search_dir="/backup_Config/MSS/Backup_FG"
                     with open('/NAS/MSS_False.txt', 'a') as falsetxt:
                         falsetxt.writelines(host)
                         falsetxt.writelines('\n')
                 
                 elif "Backup_Axgate" in vendor:
-                    search_dir="/backup_Config/MSS/Backup_Axgate"
                     with open('/NAS/MSS_False.txt', 'a') as falsetxt:
                         falsetxt.writelines(host)
                         falsetxt.writelines('\n')
 
             elif "Maintain" in service:
                 if "Backup_FG" in vendor:
-                    search_dir="/backup_Config/Maintain/Backup_FG"
                     with open('/NAS/Maintain_False.txt', 'a') as falsetxt:
                         falsetxt.writelines(host)
                         falsetxt.writelines('\n')
                 
                 elif "Backup_Axgate" in vendor:
-                    search_dir="/backup_Config/Maintain/Backup_Axgate"
                     with open('/NAS/Maintain_False.txt', 'a') as falsetxt:
                         falsetxt.writelines(host)
                         falsetxt.writelines('\n')
