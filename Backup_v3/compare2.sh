@@ -12,5 +12,5 @@ then
     echo "success"
 else
     #echo "${file_search_string}: 존재하지 않습니다."
-    echo "false"
+    echo "false2"
 fi

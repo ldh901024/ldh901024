@@ -44,6 +44,9 @@ class Compare_result():
 
     def SSH_Connection(self,host,id,pw,port_num,local_path):
         try:
+            with open("/NAS/trydevice.txt", 'a', encoding='utf-8') as file:
+                file.writelines(host+" / ID : "+id+" / PW : "+pw+" / Port : "+port_num)
+
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             ssh_client.connect(host,username=id,password=pw,port=port_num, timeout=10)
@@ -61,6 +64,9 @@ class Compare_result():
 
     def SSH_Connection_Axgate(self,host,id,pw,port_num,local_path,cmd):
         try:
+            with open("/NAS/trydevice.txt", 'a', encoding='utf-8') as file:
+                file.writelines(host+" / ID : "+id+" / PW : "+pw+" / Port : "+port_num)
+            
             ssh_client = paramiko.SSHClient()
             ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             ssh_client.connect(host, username=id, password=pw, port=port_num, timeout=10)

@@ -101,7 +101,6 @@ class getstart():
                     scpcmd = "get sys gl | grep scp"
                     scheck.SSH_SCPCheck(lhost_ip, lhost_id, lhost_pw, lhost_port, scpcmd)
                     ssh_result = scheck.SSH_Connection(lhost_ip, lhost_id, lhost_pw, lhost_port, local_path)
-                    print('결과 : ' + ssh_result)
 
                 elif result == "MSS_Axgate":
                     mssAXCnt += 1
@@ -151,7 +150,7 @@ class getstart():
 
 
         except Exception as e:
-            traceback.print_exe()
+            traceback.print_exc()
             print("Except: " + str(e))
 
         except:
