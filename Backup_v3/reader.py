@@ -96,6 +96,8 @@ class getstart():
                 """
                 result = scheck.service_check(vendor, service)
 
+                print('Start Host : ' + lhost_ip)
+
                 if result == "MSS_FG":
                     mssFGCnt += 1
                     scpcmd = "get sys gl | grep scp"
