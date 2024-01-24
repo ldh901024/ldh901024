@@ -6,6 +6,8 @@ search_directory="$2"
 conf_string=".conf"
 file_search_string="${search_string}${conf_string}"
 
+echo $file_search_string >> /search_cmd.txt
+
 if [ -e "${search_directory}/${file_search_string}" ]
 then
     #echo "${file_search_string}: 존재합니다."
