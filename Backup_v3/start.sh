@@ -16,3 +16,4 @@ python3 /usr/local/backup/Backup_v3/reader.py
 
 mkdir -p /NAS/$year/$month
 cp -r /backup_Config/* /NAS/$year/$month
+rm -rf /backup_Config/*

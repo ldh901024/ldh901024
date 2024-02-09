@@ -53,6 +53,11 @@ class getstart():
                         array[arraynum].append(line[num + 2])
                         array[arraynum].append(line[num + 3])
                         array[arraynum].append(line[num + 4])
+
+                        with open('/backup_list.txt', 'a') as file:
+                            file.write(','.join(array[arraynum]))
+                            file.write('\n')
+
                         arraynum = arraynum + 1
                     else:
                         continue
@@ -144,11 +149,6 @@ class getstart():
 
                 fornum = fornum + 1
 
-            with open('/NAS/backup_result', 'a') as bresult:
-                bresult.writelines("MSS FG Count: " + mssFGCnt)
-                bresult.writelines("MSS Axgate Count: " + mssAXCnt)
-                bresult.writelines("Maintain FG Count: " + maintainFGCnt)
-                bresult.writelines("Maintain Axgate Count: " + maintainAXCnt)
 
 
         except Exception as e:
