@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<incident incidentId="3178131" organization="Super" repeatCount="1" ruleType="Permitted_Traffic_from_FortiGuard_Malware_IP_List_2024_1_23_" severity="9" status="0">
+    <name>Permitted Traffic from FortiGuard Malware IP List 2024. 1. 23.</name>
+    <remediation/>
+    <description>Detects network traffic from FortiGuard Malware IP List</description>
+    <policyID/>
+    <displayTime>Fri Jan 26 15:19:00 KST 2024</displayTime>
+    <incidentCategory>Security/Exfiltration</incidentCategory>
+    <incidentSource>
+        <entry attribute="srcIpAddr" name="Source IP">175.201.64.6</entry>
+    </incidentSource>
+    <incidentTarget>
+        <entry attribute="destIpAddr" name="Destination IP">183.111.67.70</entry>
+    </incidentTarget>
+    <incidentDetails>
+        <entry attribute="reptDevIpAddr" name="Reporting IP">183.111.67.58 (SportalKorea_IDC_FW)</entry>
+    </incidentDetails>
+    <affectedBizSrvc/>
+    <identityLocation/>
+    <mitreTactic>Exfiltration</mitreTactic>
+    <mitreTechniqueId>T1041</mitreTechniqueId>
+    <rawEvents>
+    [FortiGuard]
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49681,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188370,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49417,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:8733316,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49904,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188376,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49392,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:8733315,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:63881,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:8733303,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49150,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188357,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49344,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:8733308,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:63877,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188349,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:48639,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188355,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+        &lt;134&gt;Jan 26 15:18:18 SportalKorea_IDC_FW kernel: ver:3,stime:2024-01-26 15:18:18,etime:- -,device:SportalKorea_IDC_FW,src:175.201.64.6,nat_src:0.0.0.0,dst:183.111.67.70,nat_dst:0.0.0.0,sport:49216,nat_sport:0,dport:443,nat_dport:0,s_pkts:1,s_bytes:66,r_pkts:0,r_bytes:0,action:pass,oper:open,country:-,sess_id:44188360,p_sess_id:0,proto:6,nat_type:-,snat_id:0,dnat_id:0,ipsec_id:0,ips_id:0,addos_id:0,l7_id:0,ts_id:0,svc_id:0,av_id:0,as_id:0,uid:-,rule_ver:4,f_zone:untrust,t_zone:trust,vd_id:0,rule_pri:44,rule_id:41,security_lvl:0,message:Session created (SYN_SENT S:-)
+
+  </rawEvents>
+</incident>
