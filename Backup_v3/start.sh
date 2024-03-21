@@ -13,6 +13,7 @@ mkdir -p /backup_Config/MSS/Backup_FG
 mkdir -p /backup_Config/MSS/Backup_Axgate
 
 python3 /usr/local/backup/Backup_v3/reader.py
+python3 /usr/local/backup/Backup_v3/search.py
 
 mkdir -p /NAS/$year/$month
 cp -r /backup_Config/* /NAS/$year/$month
