@@ -1,7 +1,7 @@
 import socket
 
 
-def send_to_syslog(message, server_address=("10.243.169.100", 514)):
+def send_to_syslog(message, server_address=("192.168.249.22", 514)):
     # UDP 소켓 생성
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
@@ -42,7 +42,7 @@ def read_file_and_send_to_syslog(file_path):
 
 
 # 파일 경로 지정
-file_path = 'C:\\Users\\ldh\\Documents\\test.txt'  # 실제 파일 경로로 변경해야 합니다.
+file_path = 'D:\\test.txt'  # 실제 파일 경로로 변경해야 합니다.
 
 # 파일 내용을 원격 시스로그 서버로 전송
 read_file_and_send_to_syslog(file_path)
