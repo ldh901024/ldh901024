@@ -1,0 +1,20 @@
+<!-- edit_rule.html -->
+{% extends 'base.html' %}
+
+{% block title %}Edit Rule{% endblock %}
+
+{% block content %}
+<h1>Edit Rule</h1>
+
+<form action="{{ url_for('update_rule', rule_id=rule.id) }}" method="post">
+    <div class="form-group">
+        <label for="ruleName">Rule Name</label>
+        <input type="text" class="form-control" id="ruleName" name="rule_name" value="{{ rule.rule }}" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" required>{{ rule.description }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Rule</button>
+</form>
+{% endblock %}

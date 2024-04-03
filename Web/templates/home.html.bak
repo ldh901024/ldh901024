@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Information</title>
+    <!-- Bootstrap CSS 추가 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h1>Device Information</h1>
+    <form action="/submit" method="post">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Device ID</th> <!-- 외부 DB의 device_id를 표시 -->
+                    <th>Customer Name</th>
+                    <th>Host Name</th>
+                    <th>Serial Number</th>
+                    <th>SMS Check</th>
+                    <th>Email Check</th>
+                </tr>
+            </thead>
+            <tbody>
+{% for device in devices %}
+<tr>
+    <td>{{ device.device_id }}</td>
+    <td>{{ device.customer_nm }}</td>
+    <td>{{ device.host_nm }}</td>
+    <td>{{ device.serial_num }}</td>
+    <td>
+        <input type="hidden" name="external_device_id" value="{{ device.device_id }}">
+        <input type="checkbox" id="sms_check_{{ device.device_id }}" name="sms_check_{{ device.device_id }}" {{ 'checked' if device.sms_checked == 'Y' else '' }}>
+        <label for="sms_check_{{ device.device_id }}">SMS</label>
+    </td>
+    <td>
+        <input type="checkbox" id="email_check_{{ device.device_id }}" name="email_check_{{ device.device_id }}" {{ 'checked' if device.email_checked == 'Y' else '' }}>
+        <label for="email_check_{{ device.device_id }}">Email</label>
+    </td>
+</tr>
+{% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</body>
+</html>
+

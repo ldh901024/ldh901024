@@ -1,0 +1,2 @@
+pip install pandas scikit-learn
+pip install pywin32

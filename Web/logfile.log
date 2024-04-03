@@ -1,0 +1,123 @@
+2024-04-03 14:50:51,260 - WARNING -  * Debugger is active!
+2024-04-03 14:50:51,262 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 14:50:51,932 - WARNING -  * Debugger is active!
+2024-04-03 14:50:51,934 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 14:50:54,121 - INFO - 127.0.0.1 - - [03/Apr/2024 14:50:54] "GET / HTTP/1.1" 200 -
+2024-04-03 14:51:13,070 - ERROR - Error fetching security rules: 1146 (42S02): Table 'portal.securityrules' doesn't exist
+2024-04-03 14:51:13,072 - INFO - 127.0.0.1 - - [03/Apr/2024 14:51:13] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 14:51:24,446 - ERROR - Error fetching security rules: 1146 (42S02): Table 'portal.securityrules' doesn't exist
+2024-04-03 14:51:24,447 - INFO - 127.0.0.1 - - [03/Apr/2024 14:51:24] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 14:51:24,676 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 14:51:24,933 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:05:43,156 - WARNING -  * Debugger is active!
+2024-04-03 15:05:43,159 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:05:43,159 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:05:43,186 - INFO - error test
+2024-04-03 15:05:43,186 - INFO - error
+2024-04-03 15:05:43,278 - ERROR - Error fetching security rules: [Errno 22] Invalid argument
+2024-04-03 15:05:43,283 - INFO - 127.0.0.1 - - [03/Apr/2024 15:05:43] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:06:42,414 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:06:42,423 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:06:42,831 - WARNING -  * Debugger is active!
+2024-04-03 15:06:42,832 - WARNING -  * Debugger is active!
+2024-04-03 15:06:42,834 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:06:42,834 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:06:42,966 - INFO - 127.0.0.1 - - [03/Apr/2024 15:06:42] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:08:19,966 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:08:19,971 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:08:20,420 - WARNING -  * Debugger is active!
+2024-04-03 15:08:20,423 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:08:20,436 - WARNING -  * Debugger is active!
+2024-04-03 15:08:20,440 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:08:23,914 - INFO - 127.0.0.1 - - [03/Apr/2024 15:08:23] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:08:41,341 - INFO - 127.0.0.1 - - [03/Apr/2024 15:08:41] "[32mPOST /add_rule HTTP/1.1[0m" 302 -
+2024-04-03 15:08:41,352 - INFO - 127.0.0.1 - - [03/Apr/2024 15:08:41] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:08:43,832 - INFO - 127.0.0.1 - - [03/Apr/2024 15:08:43] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:10:17,758 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:10:18,149 - WARNING -  * Debugger is active!
+2024-04-03 15:10:18,151 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:10:18,181 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:10:18,536 - WARNING -  * Debugger is active!
+2024-04-03 15:10:18,539 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:10:20,730 - INFO - 127.0.0.1 - - [03/Apr/2024 15:10:20] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:10:26,824 - INFO - 127.0.0.1 - - [03/Apr/2024 15:10:26] "GET /edit_rule/2 HTTP/1.1" 200 -
+2024-04-03 15:10:30,672 - INFO - 127.0.0.1 - - [03/Apr/2024 15:10:30] "[32mPOST /update_rule/2 HTTP/1.1[0m" 302 -
+2024-04-03 15:10:30,685 - INFO - 127.0.0.1 - - [03/Apr/2024 15:10:30] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:11:02,383 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:02] "[35m[1mGET /security_rules HTTP/1.1[0m" 500 -
+2024-04-03 15:11:02,392 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\werkzeug\debug\__init__.py", line 330, in debug_application
+    app_iter = self.app(environ, start_response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\Web\app.py", line 158, in security_rules
+    return render_template('security_rules.html', rules=rules)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\Web\templates\security_rules.html", line 47, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\werkzeug\serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    for data in application_iter:
+  File "C:\Users\ldh90\PycharmProjects\ldh901024\venv\Lib\site-packages\werkzeug\debug\__init__.py", line 365, in debug_application
+    environ["wsgi.errors"].write("".join(tb.render_traceback_text()))
+OSError: [Errno 22] Invalid argument
+2024-04-03 15:11:02,607 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:02] "GET /security_rules?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-04-03 15:11:02,611 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:02] "[36mGET /security_rules?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-04-03 15:11:02,631 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:02] "GET /security_rules?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-04-03 15:11:09,688 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:09] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:11:20,859 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:20] "[32mPOST /add_rule HTTP/1.1[0m" 302 -
+2024-04-03 15:11:20,869 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:20] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:11:22,291 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:22] "GET /edit_rule/3 HTTP/1.1" 200 -
+2024-04-03 15:11:23,737 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:23] "[32mPOST /update_rule/3 HTTP/1.1[0m" 302 -
+2024-04-03 15:11:23,746 - INFO - 127.0.0.1 - - [03/Apr/2024 15:11:23] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:12:49,113 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:12:49,469 - WARNING -  * Debugger is active!
+2024-04-03 15:12:49,471 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:12:49,552 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 15:12:49,900 - WARNING -  * Debugger is active!
+2024-04-03 15:12:49,903 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 15:12:53,176 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:53] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 15:12:58,072 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:58] "[32mGET /delete_rule/3 HTTP/1.1[0m" 302 -
+2024-04-03 15:12:58,084 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:58] "GET /security_rules HTTP/1.1" 200 -

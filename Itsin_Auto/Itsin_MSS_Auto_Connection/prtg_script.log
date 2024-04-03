@@ -1,0 +1,39 @@
+2024-03-26 11:15:38,761 - INFO - Starting PRTG Manager script
+2024-03-26 11:15:38,761 - INFO - PRTG Manager initialized
+2024-03-26 11:15:38,761 - INFO - Checking if group '이츠인' exists...
+2024-03-26 11:15:38,762 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:15:39,750 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/table.json?content=groups&output=json&columns=objid,name&count=*&username=itsadmin_API&passhash=3563855026 HTTP/1.1" 200 3211
+2024-03-26 11:15:39,752 - INFO - Group '이츠인' found with objid: 3876
+2024-03-26 11:15:39,752 - INFO - Adding device 'test_Office' to the group '이츠인'...
+2024-03-26 11:15:39,753 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:15:41,640 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/adddevice.htm?name=test_Office&host=58.226.22.109&devicetype=1&id=3876&username=itsadmin_API&passhash=3563855026 HTTP/1.1" 302 0
+2024-03-26 11:15:41,642 - DEBUG - Resetting dropped connection: prtg.itsin.co.kr
+2024-03-26 11:15:41,731 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/ok.htm?id=3876 HTTP/1.1" 401 45
+2024-03-26 11:15:41,732 - ERROR - Unauthorized access. Please check your username and passhash.
+2024-03-26 11:15:41,732 - INFO - Device 'test_Office' addition result: Error: Unauthorized
+2024-03-26 11:16:14,701 - INFO - Starting PRTG Manager script
+2024-03-26 11:16:14,701 - INFO - PRTG Manager initialized
+2024-03-26 11:16:14,701 - INFO - Checking if group '이츠인' exists...
+2024-03-26 11:16:14,702 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:16:14,945 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/table.json?content=groups&output=json&columns=objid,name&count=*&username=itsadmin&passhash=2670345824 HTTP/1.1" 200 3211
+2024-03-26 11:16:14,948 - INFO - Group '이츠인' found with objid: 3876
+2024-03-26 11:16:14,948 - INFO - Adding device 'test_Office' to the group '이츠인'...
+2024-03-26 11:16:14,949 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:16:17,375 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/adddevice.htm?name=test_Office&host=58.226.22.109&devicetype=1&id=3876&username=itsadmin&passhash=2670345824 HTTP/1.1" 302 0
+2024-03-26 11:16:17,376 - DEBUG - Resetting dropped connection: prtg.itsin.co.kr
+2024-03-26 11:16:17,445 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/ok.htm?id=3876 HTTP/1.1" 401 45
+2024-03-26 11:16:17,445 - ERROR - Unauthorized access. Please check your username and passhash.
+2024-03-26 11:16:17,445 - INFO - Device 'test_Office' addition result: Error: Unauthorized
+2024-03-26 11:17:20,458 - INFO - Starting PRTG Manager script
+2024-03-26 11:17:20,458 - INFO - PRTG Manager initialized
+2024-03-26 11:17:20,458 - INFO - Checking if group '이츠인' exists...
+2024-03-26 11:17:20,459 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:17:20,719 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/table.json?content=groups&output=json&columns=objid,name&count=*&username=itsadmin&passhash=2670345824 HTTP/1.1" 200 3211
+2024-03-26 11:17:20,722 - INFO - Group '이츠인' found with objid: 3876
+2024-03-26 11:17:20,722 - INFO - Adding device 'test_Office' to the group '이츠인'...
+2024-03-26 11:17:20,724 - DEBUG - Starting new HTTPS connection (1): prtg.itsin.co.kr:443
+2024-03-26 11:17:22,986 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/adddevice.htm?name=test_Office&host=58.226.22.109&devicetype=1&id=3876&username=itsadmin&passhash=2670345824 HTTP/1.1" 302 0
+2024-03-26 11:17:22,989 - DEBUG - Resetting dropped connection: prtg.itsin.co.kr
+2024-03-26 11:17:23,082 - DEBUG - https://prtg.itsin.co.kr:443 "GET /api/ok.htm?id=3876 HTTP/1.1" 401 45
+2024-03-26 11:17:23,083 - ERROR - Unauthorized access. Please check your username and passhash.
+2024-03-26 11:17:23,083 - INFO - Device 'test_Office' addition result: Error: Unauthorized
