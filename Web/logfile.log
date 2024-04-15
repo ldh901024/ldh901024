@@ -121,3 +121,30 @@ OSError: [Errno 22] Invalid argument
 2024-04-03 15:12:53,176 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:53] "GET /security_rules HTTP/1.1" 200 -
 2024-04-03 15:12:58,072 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:58] "[32mGET /delete_rule/3 HTTP/1.1[0m" 302 -
 2024-04-03 15:12:58,084 - INFO - 127.0.0.1 - - [03/Apr/2024 15:12:58] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 17:05:23,060 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 17:05:23,728 - WARNING -  * Debugger is active!
+2024-04-03 17:05:23,732 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 17:06:16,920 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 17:06:17,278 - WARNING -  * Debugger is active!
+2024-04-03 17:06:17,282 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 17:12:54,095 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 17:12:54,426 - WARNING -  * Debugger is active!
+2024-04-03 17:12:54,428 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 17:14:22,916 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.140:5000
+2024-04-03 17:14:22,916 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-03 17:14:22,917 - INFO -  * Restarting with stat
+2024-04-03 17:14:23,215 - WARNING -  * Debugger is active!
+2024-04-03 17:14:23,217 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 17:15:03,539 - INFO - 127.0.0.1 - - [03/Apr/2024 17:15:03] "GET / HTTP/1.1" 200 -
+2024-04-03 17:16:00,368 - INFO - 127.0.0.1 - - [03/Apr/2024 17:16:00] "GET / HTTP/1.1" 200 -
+2024-04-03 17:16:15,192 - INFO - 127.0.0.1 - - [03/Apr/2024 17:16:15] "GET /security_rules HTTP/1.1" 200 -
+2024-04-03 17:16:16,199 - INFO - 127.0.0.1 - - [03/Apr/2024 17:16:16] "GET /test HTTP/1.1" 200 -
+2024-04-03 17:16:16,786 - INFO - 127.0.0.1 - - [03/Apr/2024 17:16:16] "GET / HTTP/1.1" 200 -
+2024-04-03 17:19:11,832 - INFO - 127.0.0.1 - - [03/Apr/2024 17:19:11] "GET / HTTP/1.1" 200 -
+2024-04-03 17:22:12,269 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-03 17:22:12,604 - WARNING -  * Debugger is active!
+2024-04-03 17:22:12,606 - INFO -  * Debugger PIN: 118-612-875
+2024-04-03 17:22:25,872 - INFO - 127.0.0.1 - - [03/Apr/2024 17:22:25] "GET / HTTP/1.1" 200 -

@@ -12,6 +12,8 @@
             <th scope="col">ID</th>
             <th scope="col">Rule Name</th>
             <th scope="col">Description</th>
+            <th scope="col">tactics</th>
+            <th scope="col">technique</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -22,6 +24,8 @@
             <td>{{ rule.id }}</td>
             <td>{{ rule.rule }}</td>
             <td>{{ rule.description }}</td>
+            <td>{{ rule.tactics }}</td>
+            <td>{{ rule.technique }}</td>
             <td>
                 <a href="{{ url_for('edit_rule', rule_id=rule.id) }}" class="btn btn-sm btn-primary">Edit</a>
                 <a href="{{ url_for('delete_rule', rule_id=rule.id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>

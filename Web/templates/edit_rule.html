@@ -15,6 +15,14 @@
         <label for="description">Description</label>
         <textarea class="form-control" id="description" name="description" rows="3" required>{{ rule.description }}</textarea>
     </div>
+    <div class="form-group">
+        <label for="tactics">Tactics</label>
+        <textarea class="form-control" id="tactics" name="tactics" rows="3" required>{{ rule.tactics }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="technique">Technique</label>
+        <textarea class="form-control" id="technique" name="technique" rows="3" required>{{ rule.technique }}</textarea>
+    </div>
     <button type="submit" class="btn btn-primary">Update Rule</button>
 </form>
 {% endblock %}
