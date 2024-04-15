@@ -253,7 +253,7 @@ def update_rule(rule_id):
     conn = get_local_db_connection()
     cursor = conn.cursor()
 
-    cursor.execute("UPDATE SecurityRules SET rule = %s, description = %s WHERE id = %s",
+    cursor.execute("UPDATE SecurityRules SET rule = %s, description = %s, tactics = %s, technique = %s WHERE id = %s",
                    (rule_name, description, rule_id, tactics, technique))
     conn.commit()
 
