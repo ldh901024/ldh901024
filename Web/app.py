@@ -249,12 +249,16 @@ def update_rule(rule_id):
     description = request.form['description']
     tactics = request.form['tactics']
     technique = request.form['technique']
+    print(tactics)
+    print(technique)
 
     conn = get_local_db_connection()
     cursor = conn.cursor()
+    print("UPDATE SecurityRules SET rule = %s, description = %s, tactics = %s, technique = %s WHERE id = %s",
+                   (rule_name, description, rule_id, tactics, technique,))
 
     cursor.execute("UPDATE SecurityRules SET rule = %s, description = %s, tactics = %s, technique = %s WHERE id = %s",
-                   (rule_name, description, rule_id, tactics, technique))
+                   (rule_name, description, tactics, technique, rule_id))
     conn.commit()
 
     cursor.close()

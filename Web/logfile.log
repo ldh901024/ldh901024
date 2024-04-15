@@ -148,3 +148,55 @@ OSError: [Errno 22] Invalid argument
 2024-04-03 17:22:12,604 - WARNING -  * Debugger is active!
 2024-04-03 17:22:12,606 - INFO -  * Debugger PIN: 118-612-875
 2024-04-03 17:22:25,872 - INFO - 127.0.0.1 - - [03/Apr/2024 17:22:25] "GET / HTTP/1.1" 200 -
+2024-04-15 12:15:13,298 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.140:5000
+2024-04-15 12:15:13,298 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 12:15:13,302 - INFO -  * Restarting with stat
+2024-04-15 12:15:13,557 - WARNING -  * Debugger is active!
+2024-04-15 12:15:13,559 - INFO -  * Debugger PIN: 202-462-502
+2024-04-15 12:15:22,971 - INFO - 127.0.0.1 - - [15/Apr/2024 12:15:22] "[32mGET / HTTP/1.1[0m" 302 -
+2024-04-15 12:15:22,989 - INFO - 127.0.0.1 - - [15/Apr/2024 12:15:22] "GET /login HTTP/1.1" 200 -
+2024-04-15 12:15:23,227 - INFO - 127.0.0.1 - - [15/Apr/2024 12:15:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-15 12:15:28,681 - INFO - 127.0.0.1 - - [15/Apr/2024 12:15:28] "POST /login HTTP/1.1" 200 -
+2024-04-15 12:17:05,429 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-15 12:17:05,521 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:05] "GET / HTTP/1.1" 200 -
+2024-04-15 12:17:10,185 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:10] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:17:12,252 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:12] "GET /edit_rule/1 HTTP/1.1" 200 -
+2024-04-15 12:17:14,669 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:14] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
+2024-04-15 12:17:14,687 - INFO - 127.0.0.1 - - [15/Apr/2024 12:17:14] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:19:28,081 - INFO - 127.0.0.1 - - [15/Apr/2024 12:19:28] "GET /edit_rule/1 HTTP/1.1" 200 -
+2024-04-15 12:19:32,985 - INFO - 127.0.0.1 - - [15/Apr/2024 12:19:32] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
+2024-04-15 12:19:32,993 - INFO - 127.0.0.1 - - [15/Apr/2024 12:19:32] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:21:59,936 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-15 12:21:59,956 - INFO -  * Restarting with stat
+2024-04-15 12:22:00,199 - WARNING -  * Debugger is active!
+2024-04-15 12:22:00,202 - INFO -  * Debugger PIN: 202-462-502
+2024-04-15 12:22:03,040 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.140:5000
+2024-04-15 12:22:03,040 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 12:22:03,041 - INFO -  * Restarting with stat
+2024-04-15 12:22:03,294 - WARNING -  * Debugger is active!
+2024-04-15 12:22:03,295 - INFO -  * Debugger PIN: 202-462-502
+2024-04-15 12:22:07,171 - INFO - 127.0.0.1 - - [15/Apr/2024 12:22:07] "GET /edit_rule/1 HTTP/1.1" 200 -
+2024-04-15 12:22:11,062 - INFO - 127.0.0.1 - - [15/Apr/2024 12:22:11] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
+2024-04-15 12:22:11,074 - INFO - 127.0.0.1 - - [15/Apr/2024 12:22:11] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:23:02,729 - INFO -  * Detected change in 'C:\\Users\\ldh90\\PycharmProjects\\ldh901024\\Web\\app.py', reloading
+2024-04-15 12:23:02,760 - INFO -  * Restarting with stat
+2024-04-15 12:23:02,992 - WARNING -  * Debugger is active!
+2024-04-15 12:23:02,993 - INFO -  * Debugger PIN: 202-462-502
+2024-04-15 12:24:45,097 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.140:5000
+2024-04-15 12:24:45,097 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 12:24:45,098 - INFO -  * Restarting with stat
+2024-04-15 12:24:45,355 - WARNING -  * Debugger is active!
+2024-04-15 12:24:45,357 - INFO -  * Debugger PIN: 202-462-502
+2024-04-15 12:24:53,450 - INFO - 127.0.0.1 - - [15/Apr/2024 12:24:53] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:24:55,573 - INFO - 127.0.0.1 - - [15/Apr/2024 12:24:55] "GET /edit_rule/1 HTTP/1.1" 200 -
+2024-04-15 12:25:00,070 - INFO - 127.0.0.1 - - [15/Apr/2024 12:25:00] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
+2024-04-15 12:25:00,084 - INFO - 127.0.0.1 - - [15/Apr/2024 12:25:00] "GET /security_rules HTTP/1.1" 200 -
