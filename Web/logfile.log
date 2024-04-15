@@ -200,3 +200,179 @@ OSError: [Errno 22] Invalid argument
 2024-04-15 12:24:55,573 - INFO - 127.0.0.1 - - [15/Apr/2024 12:24:55] "GET /edit_rule/1 HTTP/1.1" 200 -
 2024-04-15 12:25:00,070 - INFO - 127.0.0.1 - - [15/Apr/2024 12:25:00] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
 2024-04-15 12:25:00,084 - INFO - 127.0.0.1 - - [15/Apr/2024 12:25:00] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:26:19,625 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 12:26:19,625 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 12:26:19,626 - INFO -  * Restarting with stat
+2024-04-15 12:26:19,859 - WARNING -  * Debugger is active!
+2024-04-15 12:26:19,860 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 12:26:30,424 - INFO - 172.16.21.140 - - [15/Apr/2024 12:26:30] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 12:26:32,747 - INFO - 172.16.21.140 - - [15/Apr/2024 12:26:32] "GET /edit_rule/1 HTTP/1.1" 200 -
+2024-04-15 12:26:37,005 - INFO - 172.16.21.140 - - [15/Apr/2024 12:26:37] "[32mPOST /update_rule/1 HTTP/1.1[0m" 302 -
+2024-04-15 12:26:37,030 - INFO - 172.16.21.140 - - [15/Apr/2024 12:26:37] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 13:52:28,401 - INFO - 172.16.21.140 - - [15/Apr/2024 13:52:28] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 13:54:28,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 13:54:28,514 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 13:54:28,515 - INFO -  * Restarting with stat
+2024-04-15 13:54:28,744 - WARNING -  * Debugger is active!
+2024-04-15 13:54:28,744 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 13:54:30,752 - INFO - 172.16.21.140 - - [15/Apr/2024 13:54:30] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:03:11,462 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:03:11,463 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:03:11,463 - INFO -  * Restarting with stat
+2024-04-15 15:03:11,693 - WARNING -  * Debugger is active!
+2024-04-15 15:03:11,693 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:03:13,786 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:13] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:03:15,467 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:15] "GET / HTTP/1.1" 200 -
+2024-04-15 15:03:16,520 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:16] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:03:25,415 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:25] "[32mPOST /add_rule HTTP/1.1[0m" 302 -
+2024-04-15 15:03:25,440 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:25] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:03:47,313 - ERROR - Error adding new rule: 1406 (22001): Data too long for column 'tactics' at row 1
+2024-04-15 15:03:47,314 - INFO - 172.16.21.140 - - [15/Apr/2024 15:03:47] "[35m[1mPOST /add_rule HTTP/1.1[0m" 500 -
+2024-04-15 15:04:39,358 - ERROR - Error adding new rule: 1406 (22001): Data too long for column 'tactics' at row 1
+2024-04-15 15:04:39,359 - INFO - 172.16.21.140 - - [15/Apr/2024 15:04:39] "[35m[1mPOST /add_rule HTTP/1.1[0m" 500 -
+2024-04-15 15:07:29,580 - INFO - 172.16.21.140 - - [15/Apr/2024 15:07:29] "[32mPOST /add_rule HTTP/1.1[0m" 302 -
+2024-04-15 15:07:29,600 - INFO - 172.16.21.140 - - [15/Apr/2024 15:07:29] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:10:10,212 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:10:10,212 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:10:10,213 - INFO -  * Restarting with stat
+2024-04-15 15:10:10,444 - WARNING -  * Debugger is active!
+2024-04-15 15:10:10,444 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:10:16,883 - INFO - 172.16.21.140 - - [15/Apr/2024 15:10:16] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:10:20,179 - INFO - 172.16.21.140 - - [15/Apr/2024 15:10:20] "GET /test HTTP/1.1" 200 -
+2024-04-15 15:10:20,698 - INFO - 172.16.21.140 - - [15/Apr/2024 15:10:20] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:12:05,901 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:12:05,901 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:12:05,902 - INFO -  * Restarting with stat
+2024-04-15 15:12:06,130 - WARNING -  * Debugger is active!
+2024-04-15 15:12:06,130 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:12:07,357 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:07] "GET / HTTP/1.1" 200 -
+2024-04-15 15:12:08,853 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:08] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:12:15,438 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:15] "[32mGET /security_rules HTTP/1.1[0m" 302 -
+2024-04-15 15:12:15,461 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:15] "GET /login HTTP/1.1" 200 -
+2024-04-15 15:12:15,578 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-15 15:12:20,031 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-15 15:12:20,102 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:20] "GET / HTTP/1.1" 200 -
+2024-04-15 15:12:23,297 - INFO - 172.16.21.140 - - [15/Apr/2024 15:12:23] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:13:48,162 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:13:48,162 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:13:48,162 - INFO -  * Restarting with stat
+2024-04-15 15:13:48,395 - WARNING -  * Debugger is active!
+2024-04-15 15:13:48,396 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:13:53,061 - INFO - 172.16.21.140 - - [15/Apr/2024 15:13:53] "GET / HTTP/1.1" 200 -
+2024-04-15 15:13:54,134 - INFO - 172.16.21.140 - - [15/Apr/2024 15:13:54] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:15:57,272 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:15:57,272 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:15:57,273 - INFO -  * Restarting with stat
+2024-04-15 15:15:57,507 - WARNING -  * Debugger is active!
+2024-04-15 15:15:57,507 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:16:01,164 - INFO - 172.16.21.140 - - [15/Apr/2024 15:16:01] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:16:07,184 - INFO - 172.16.21.140 - - [15/Apr/2024 15:16:07] "GET /login HTTP/1.1" 200 -
+2024-04-15 15:16:11,807 - INFO - 172.16.21.140 - - [15/Apr/2024 15:16:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-15 15:16:11,883 - INFO - 172.16.21.140 - - [15/Apr/2024 15:16:11] "GET / HTTP/1.1" 200 -
+2024-04-15 15:16:13,279 - INFO - 172.16.21.140 - - [15/Apr/2024 15:16:13] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:16:56,294 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:16:56,295 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:16:56,295 - INFO -  * Restarting with stat
+2024-04-15 15:16:56,523 - WARNING -  * Debugger is active!
+2024-04-15 15:16:56,523 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:17:01,145 - INFO - 172.16.21.140 - - [15/Apr/2024 15:17:01] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:17:40,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:17:40,760 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:17:40,760 - INFO -  * Restarting with stat
+2024-04-15 15:17:40,992 - WARNING -  * Debugger is active!
+2024-04-15 15:17:40,992 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:17:43,511 - INFO - 172.16.21.140 - - [15/Apr/2024 15:17:43] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:18:39,680 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:18:39,681 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:18:39,681 - INFO -  * Restarting with stat
+2024-04-15 15:18:39,916 - WARNING -  * Debugger is active!
+2024-04-15 15:18:39,917 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:18:43,618 - INFO - 172.16.21.140 - - [15/Apr/2024 15:18:43] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:18:45,078 - INFO - 172.16.21.140 - - [15/Apr/2024 15:18:45] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:19:30,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:19:30,575 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:19:30,576 - INFO -  * Restarting with stat
+2024-04-15 15:19:30,809 - WARNING -  * Debugger is active!
+2024-04-15 15:19:30,809 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:19:42,886 - INFO - 172.16.21.140 - - [15/Apr/2024 15:19:42] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:19:59,664 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:19:59,664 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:19:59,665 - INFO -  * Restarting with stat
+2024-04-15 15:19:59,899 - WARNING -  * Debugger is active!
+2024-04-15 15:19:59,899 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:20:01,956 - INFO - 172.16.21.140 - - [15/Apr/2024 15:20:01] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:20:29,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:20:29,966 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:20:29,966 - INFO -  * Restarting with stat
+2024-04-15 15:20:30,202 - WARNING -  * Debugger is active!
+2024-04-15 15:20:30,202 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:20:31,147 - INFO - 172.16.21.140 - - [15/Apr/2024 15:20:31] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:20:32,053 - INFO - 172.16.21.140 - - [15/Apr/2024 15:20:32] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:22:17,151 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:22:17,151 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:22:17,152 - INFO -  * Restarting with stat
+2024-04-15 15:22:17,387 - WARNING -  * Debugger is active!
+2024-04-15 15:22:17,388 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:22:20,897 - INFO - 172.16.21.140 - - [15/Apr/2024 15:22:20] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:22:23,177 - INFO - 172.16.21.140 - - [15/Apr/2024 15:22:23] "GET /test HTTP/1.1" 200 -
+2024-04-15 15:22:23,745 - INFO - 172.16.21.140 - - [15/Apr/2024 15:22:23] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:26:11,433 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:26:11,433 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:26:11,434 - INFO -  * Restarting with stat
+2024-04-15 15:26:11,668 - WARNING -  * Debugger is active!
+2024-04-15 15:26:11,668 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:26:14,303 - INFO - 172.16.21.140 - - [15/Apr/2024 15:26:14] "GET /security_rules HTTP/1.1" 200 -
+2024-04-15 15:28:10,598 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.16.21.249:5000
+2024-04-15 15:28:10,598 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-15 15:28:10,599 - INFO -  * Restarting with stat
+2024-04-15 15:28:10,834 - WARNING -  * Debugger is active!
+2024-04-15 15:28:10,834 - INFO -  * Debugger PIN: 108-587-476
+2024-04-15 15:28:13,642 - INFO - 172.16.21.140 - - [15/Apr/2024 15:28:13] "GET /security_rules HTTP/1.1" 200 -
